@@ -42,7 +42,7 @@ router.post("/products", async (req, res) => {
 // 상품 목록 조회 API
 router.get("/products", async (req, res) => {
   try {
-    const products = await Product.find({}).sort({ createdAt: -1 });;
+    const products = await Product.find({}).sort({ createdAt: -1 });
     const responseData = products.map((product) => {
       return {
         productId: product._id,
@@ -98,12 +98,12 @@ router.put("/products/:_productId", async (req, res) => {
       .json({ errorMessage: "데이터 형식이 올바르지 않습니다." });
   }
 
-    // 유효한 상태인지 확인
-    if (!["FOR_SALE", "SOLD_OUT"].includes(status)) {
-      return res
-        .status(400)
-        .json({ errorMessage: "유효하지 않은 상품 상태입니다." });
-    }
+  // 유효한 상태인지 확인
+  if (!["FOR_SALE", "SOLD_OUT"].includes(status)) {
+    return res
+      .status(400)
+      .json({ errorMessage: "유효하지 않은 상품 상태입니다." });
+  }
 
   //상품 존재 여부 및 비밀번호 확인
   const existingproduct = await Product.findById(productId);

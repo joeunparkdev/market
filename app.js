@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const routes = require("./routes/products.router");
 const connect = require("./schemas");
-require('dotenv').config();
+require("dotenv").config();
 
 connect();
 
