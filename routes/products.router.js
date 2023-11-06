@@ -22,12 +22,10 @@ router.post("/products", async (req, res) => {
 
     // MongoDB를 사용하여 상품 생성
     try {
-      // 기본 상태를 "판매 중 (FOR_SALE)"으로 설정
       const newProduct = await Product.create({
         title,
         content,
         password: hashPassword,
-        status: "FOR_SALE",
       });
       res.json({
         message: "상품을 생성하였습니다.",

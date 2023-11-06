@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: null,
+    default: "FOR_SALE",
   },
 });
 productSchema.set("timestamps", { createdAt: true, updatedAt: false });
