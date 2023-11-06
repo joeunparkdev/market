@@ -8,7 +8,7 @@
 2. **패키지 매니저**: 빠른 설치 속도와 우수한 패키지 관리를 지원하는 **npm** 또는 **yarn** 패키지 매니저를 사용합니다.
 3. **모듈 시스템**: 최신 JS 문법을 지원하는 **ES6** 모듈 시스템 또는 기본 **CommonJS** 모듈 시스템을 사용합니다.
 4. **데이터베이스**: [**MongoDB Cloud**](https://www.mongodb.com/products/platform/cloud)에서 대여한 대표적인 NoSQL인 **MongoDB Atlas**을 사용합니다.
-5. **ODM**: **MongoDB**의 데이터를 쉽게 읽고 쓰게 해주는 [**mongoose](https://mongoosejs.com/docs/guide.html) ODM**을 사용합니다.
+5. **ODM**: **MongoDB**의 데이터를 쉽게 읽고 쓰게 해주는 **[mongoose](https://mongoosejs.com/docs/guide.html) ODM**을 사용합니다.
 6. AWS EC2 와 Gabia를 사용한 배포 IP 주소: http://15.165.19.125/
    
 # 주요 기능
