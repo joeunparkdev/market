@@ -5,8 +5,8 @@ const Product = require("../schemas/products.schema");
 
 // 상품 작성 API
 router.post("/products", async (req, res) => {
-  const { password, title, content } = req.body;
-  if (!password || !title || !content) {
+  const { password, title, content, author } = req.body;
+  if (!password || !title || !content || !author) {
     return res
       .status(400)
       .json({ errorMessage: "데이터 형식이 올바르지 않습니다." });
@@ -26,6 +26,7 @@ router.post("/products", async (req, res) => {
         title,
         content,
         password: hashPassword,
+        author,
       });
       res.json({
         message: "상품을 생성하였습니다.",
@@ -49,6 +50,7 @@ router.get("/products", async (req, res) => {
         title: product.title,
         content: product.content,
         status: product.status,
+        author: product.author,
         createdAt: product.createdAt,
       };
     });
@@ -75,6 +77,7 @@ router.get("/products/:_productId", async (req, res) => {
       title: product.title,
       content: product.content,
       status: product.status,
+      author: product.author,
       createdAt: product.createdAt,
     };
 
