@@ -1,4 +1,4 @@
-# nodejs_assi1
+# market
 
 # 프로젝트 소개
 - Node.js와 express를 활용한 **내배캠 장터 백엔드 서버**를 제작
